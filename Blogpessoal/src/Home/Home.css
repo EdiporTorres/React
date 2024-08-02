@@ -13,6 +13,24 @@
     height: 150px;
 }
 
+.navbar{
+    background-color: aliceblue;
+;
+    padding: 1em;
+}
+
+.nav-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-item{
+    position: relative;
+}
+
 body{
 background-image: url("https://img.freepik.com/vetores-gratis/papel-de-parede-tecnologico-futurista_79603-1093.jpg");
 background-size: cover;
