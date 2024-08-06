@@ -9,7 +9,7 @@ function Contador() {
   return (
     <div>
         <p>O Valor é: {valor}</p>
-        <button onMouseDown={somarMaisUm}>Clique aqui</button>
+        <button  onMouseDown={somarMaisUm}>Clique aqui</button>
     </div>
   )
 }
