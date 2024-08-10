@@ -78,7 +78,7 @@ function Login() {
   
             <hr className="border-slate-800 w-full" />
   
-            <p>
+            <p className= 'text-white'>
               Ainda não tem uma conta?{' '}
               <Link to="/cadastro" className="text-indigo-800 hover:underline">
                 Cadastre-se
