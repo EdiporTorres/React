@@ -1,9 +1,9 @@
 import { useContext, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import loginLogo from '../../assets/login.jpg';
-import { AuthContext } from '../../Context/AuthContext';
-import { toastAlert } from '../../Util/ToastAlert';
 
+import { AuthContext } from '../../Context/AuthContext';
+import { toastAlerta } from '../../Util/ToastAlert';
+import loginLogo from '../../assets/login.jpg';
 function Perfil() {
     let navigate = useNavigate();
     const { usuario, setUsuario } = useContext(AuthContext);
@@ -12,7 +12,7 @@ function Perfil() {
 
     useEffect(() => {
         if (usuario.token === '') {
-            toastAlert ('Dados inconsistentes. Verifique as informações de cadastro.', 'erro')
+            toastAlerta ('Dados inconsistentes. Verifique as informações de cadastro.', 'erro')
             navigate('/login');
         }
     }, [usuario.token, navigate]);

@@ -1,7 +1,7 @@
 import { createContext, ReactNode, useState } from "react";
 import UsuarioLogin from "../Models/UsuarioLogin";
 import { login } from "../services/Services";
-import { toastAlert }  from '../Util/ToastAlert.tsx'
+import { toastAlerta }  from '../Util/ToastAlert.ts'
 
 interface AuthContextProps {
     usuario: UsuarioLogin;
@@ -34,12 +34,12 @@ export function AuthProvider({ children }: AuthProviderProps) {
         setIsLoading(true)
         try {
             await login(`/usuarios/logar`, userLogin, setUsuario)
-            toastAlert('Você precisa estar logado', 'info');
+            toastAlerta('Você precisa estar logado', 'info');
             setIsLoading(false)
 
         } catch (error) {
             console.log(error)
-            toastAlert('Você precisa estar logado', 'info');
+            toastAlerta('Você precisa estar logado', 'info');
             setIsLoading(false)
         }
     }

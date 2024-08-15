@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import './Cadastro.css'
 import Usuario from '../../Models/Usuario'
 import { cadastrarUsuario } from '../../services/Services'
-import { toastAlert }  from '../../Util/ToastAlert.tsx'
+import { toastAlerta }  from '../../Util/ToastAlert.ts'
 
 function Cadastro() {
 
@@ -55,14 +55,14 @@ function Cadastro() {
   
         try {
           await cadastrarUsuario(`/usuarios/cadastrar`, usuario, setUsuarioResposta)
-          toastAlert('Usuário cadastrado com sucesso', 'sucesso')
+          // atoastAlerta('Usuário cadastrado com sucesso', 'sucesso')
   
         } catch (error) {
-          toastAlert('Usuário cadastrado com sucesso', 'sucesso')
+          // atoastAlerta('Usuário cadastrado com sucesso', 'sucesso')
         }
   
       } else {
-        toastAlert('Dados inconsistentes. Verifique as informações de cadastro.', 'erro')
+        toastAlerta('Dados inconsistentes. Verifique as informações de cadastro.', 'erro')
         setUsuario({ ...usuario, senha: "" }) // Reinicia o campo de Senha
         setConfirmaSenha("")                  // Reinicia o campo de Confirmar Senha
       }
