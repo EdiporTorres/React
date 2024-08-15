@@ -1,6 +1,6 @@
-import React, { ChangeEvent, useContext, useEffect, useState } from 'react';
+import { ChangeEvent, useContext, useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { AuthContext } from '../../../context/AuthContext';
+import { AuthContext } from '../../../Context/AuthContext';
 import Tema from '../../../Models/Tema';
 import { atualizar, buscar, cadastrar } from '../../../services/Services';
 

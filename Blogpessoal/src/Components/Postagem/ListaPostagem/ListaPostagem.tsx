@@ -1,7 +1,7 @@
-import React, { useContext, useEffect, useState } from 'react';
+import  { useContext, useEffect, useState } from 'react';
 import { Dna } from 'react-loader-spinner';
 import { useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../../context/AuthContext';
+import { AuthContext } from '../../../Context/AuthContext';
 import { buscar } from '../../../services/Services';
 import CardPostagem from '../CardPostagem/CardPostagem';
 import Postagem from '../../../Models/Postagem';

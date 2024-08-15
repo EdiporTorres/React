@@ -1,23 +1,38 @@
-import React from 'react'
-import { FacebookLogo, InstagramLogo, LinkedinLogo } from '@phosphor-icons/react'
+import  { useContext } from 'react'
+
+import { AuthContext } from '../../Context/AuthContext'
 
 function Footer() {
- 
-  
 
-  return (
+
+  const { usuario, handleLogout } = useContext(AuthContext)
+
+  let footerComponent
+
+  let data = new Date().getFullYear()
+
+  if(usuario.token !== '') {
+    footerComponent = (
     <>
-        <div className="flex justify-center bg-stone-700	 text-white">
-          <div className="container flex flex-col items-center py-4">
-            <p className='text-xl font-bold'>Blog pessoal Édipo Reis | Copyright: </p>
-            <p className='text-lg'>Acesse nossas redes sociais</p>
-            <div className='flex gap-2'>
-              <LinkedinLogo href='#' className="hover:underline me-4 md:me-6" size={48} weight='bold' />
-              <InstagramLogo href='#' className="hover:underline me-4 md:me-6"  size={48} weight='bold' />
-              <FacebookLogo href='#' className="hover:underline me-4 md:me-6"  size={48} weight='bold' />
-            </div>
+      <div className="bg-primary py-6 mt-8 container mx-auto text-center text-white">
+        <p className="italic">"As pessoas só morrem quando são esquecidas"</p>
+        <p className="text-sm mt-2">- Hiriluk- One piece</p>
+        <div className="mt-4 space-x-4">
+
+          <div className="mt-4 space-x-4">
+            <a href="https://www.instagram.com/etipo.rei/" className="text-accent">Instagram</a>
+            <a href="https://www.linkedin.com/in/edipo-torres" className="text-accent">Linkedin</a>
           </div>
+          <p className="mt-4">Blog pessoal Édipo Reis | Copyright © :  {data}</p>
         </div>
+      </div>
+    </>
+      )
+    }
+  
+     return (
+      <>
+        {footerComponent}
       </>
   )
 }

@@ -4,7 +4,7 @@ import './Login.css';
 import { Link, useNavigate } from 'react-router-dom';
 
 import { RotatingLines } from 'react-loader-spinner';
-import { AuthContext } from '../../context/AuthContext';
+import { AuthContext } from '../../Context/AuthContext';
 import UsuarioLogin from '../../Models/UsuarioLogin';
 
 function Login() {
@@ -20,6 +20,7 @@ function Login() {
   
     useEffect(() => {
       if (usuario.token !== "") {
+        
           navigate('/home')
       }
   }, [usuario])
